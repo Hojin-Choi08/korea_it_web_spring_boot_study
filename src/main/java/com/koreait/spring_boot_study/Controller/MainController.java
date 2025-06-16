@@ -74,4 +74,11 @@ public class MainController {
         model.addAttribute("message", name + "님, 가입 환영");
         return "signup-result";
     }
+
+    @GetMapping("/users")
+    public String userList(Model model) {
+        model.addAttribute("users", users);
+        return "users";
+    }
+
 }
